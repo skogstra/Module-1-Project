@@ -15,7 +15,7 @@ species <- levels(dat$species)
 species
 
 # A line of code which reports the dimensions of the dataset.
-length(species)
+print(paste(length(dat), "x", length(species)))
 
 # Code that produces a summary of the number of scales punctured for each species.
 species.n<- dat %>%
