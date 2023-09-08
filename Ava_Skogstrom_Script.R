@@ -12,12 +12,15 @@ class(dat$quadrant)
 class(dat$species)
 class(dat$specimen)
 
+#A line of code which reports the class of each column in the dataset
 sapply(dat,class)
 
 dat$species <- as.factor(dat$species)
 species <- levels(dat$species)
 species 
-length(species)
+
+#A line of code which reports the dimensions of the dataset
+print(paste(length(dat), "x", length(species)))
 
 dat$species==species[1]
 dat$species[dat$species==species[1]]
@@ -59,3 +62,4 @@ for(i in species){
 dev.off()
 
 list.files(pattern=".pdf")
+
